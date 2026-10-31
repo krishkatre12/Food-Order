@@ -1,0 +1,23 @@
+{
+  "name": "foodorder",
+  "version": "1.0.0",
+  "description": "Complete Online Food Ordering and Delivery System Single Page Application",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "test": "node test/suite.js"
+  },
+  "keywords": [
+    "food-ordering",
+    "food-delivery",
+    "spa",
+    "javascript",
+    "vanilla-js",
+    "css3",
+    "html5"
+  ],
+  "author": "krishkatre12",
+  "license": "MIT"
+}
+

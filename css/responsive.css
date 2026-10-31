@@ -1,0 +1,146 @@
+/* ==========================================================================
+   FoodOrder - Responsive Queries & Mobile Adjustments
+   ========================================================================== */
+
+/* Universal Responsive Grids */
+.restaurants-grid, .food-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 600px) {
+  .restaurants-grid, .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .restaurants-grid, .food-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .restaurants-grid, .food-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Mobile Adjustments (under 768px) */
+@media (max-width: 768px) {
+  main.main-content {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--space-8));
+    padding-top: calc(var(--navbar-height) + var(--space-2));
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-float-card {
+    display: none; /* Hide floating widgets on very narrow screens */
+  }
+
+  .hero-image-wrapper img {
+    height: 280px;
+  }
+
+  .restaurant-banner {
+    height: 200px;
+  }
+
+  .restaurant-banner-overlay {
+    padding: var(--space-4);
+  }
+
+  .cart-drawer {
+    max-width: 100%;
+  }
+
+  .modal-dialog {
+    max-height: 95vh;
+    border-radius: var(--radius-xl);
+  }
+
+  .modal-body {
+    padding: var(--space-4);
+  }
+
+  .modal-header, .modal-footer {
+    padding: var(--space-4);
+  }
+
+  #toast-container {
+    left: 12px;
+    right: 12px;
+    max-width: calc(100% - 24px);
+    top: 76px;
+  }
+}
+
+/* Extra Small Devices (320px - 375px) */
+@media (max-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+
+  .brand-logo {
+    font-size: var(--font-size-lg);
+  }
+
+  .brand-logo .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-action-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .user-profile-badge span:not(.user-avatar) {
+    display: none;
+  }
+
+  .checkout-card {
+    padding: var(--space-4);
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* Large Screens (1440px+) */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1360px;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Stylesheet */
+@media print {
+  .navbar, .bottom-nav, .footer, .btn, .cart-drawer, #toast-container {
+    display: none !important;
+  }
+  body {
+    background: #FFF !important;
+    color: #000 !important;
+  }
+  .card, .checkout-card {
+    box-shadow: none !important;
+    border: 1px solid #CCC !important;
+  }
+}
+
